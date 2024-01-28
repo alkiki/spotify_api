@@ -1,0 +1,21 @@
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+#json-content{
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    text-align: center;
+}
+
+ul{
+  list-style-type: none
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="vinyl_cover.jpeg" alt="" />
+    <div id="json-content">
+      <!-- <button onclick="redirectToLogin()">Click me!</button> -->
+
+      <ul></ul>
+    </div>
+    <script>
+      let productsArray = [];
+      const element = document.querySelector("ul");
+      fetch("./myjsonfile.json")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data.table);
+          for (let i = 0; i < data.table.length; i++) {
+            //  if (data.table[i].length >= )
+            element.insertAdjacentHTML("beforeEnd", `<li>${data.table[i]}<li>`);
+            console.log(data.table[i]);
+            console.log(data.table[1].length);
+          }
+        });
+    </script>
+    <script>
+      function redirectToLogin() {
+        window.location.href = "http://localhost:3000/login";
+      }
+    </script>
+  </body>
+</html>
